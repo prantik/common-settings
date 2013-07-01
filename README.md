@@ -1,2 +1,4 @@
-common-settings
+common 
+ - bash, vi settings
+ - git aliases
 ===============
