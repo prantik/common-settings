@@ -25,7 +25,7 @@ set backspace=indent,eol,start
 " Use UTF-8 as the default buffer encoding
 set enc=utf-8
 
-" Remember up to 100 'colon' commmands and search patterns
+" Remember up to 9999 'colon' commmands and search patterns
 set history=9999
 
 " Enable incremental search
