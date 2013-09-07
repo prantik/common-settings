@@ -1,6 +1,8 @@
 source $HOME/.bash_aliases
 
-export PATH=/opt/local/bin:/opt/local/sbin:/Applications/play-2.0.4:/Applications::$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
+
+export _JAVA_OPTIONS="-Xmx2048m -Xms1024M -Xss64m -XX:MaxPermSize=1024M -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 
 alias mysqlstart='sudo /opt/local/lib/mysql5/bin/mysqld_safe &'
 alias mysqlstop='sudo /opt/local/share/mysql5/mysql/mysql.server stop'
