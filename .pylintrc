@@ -1,4 +1,7 @@
 [MESSAGES CONTROL]
 # C0111 Missing docstring 
-disable=C0111
+# R0903,C0103 Invalid Name
+# W0611 unused import
+# W0614: Unused import %s from wildcard import
+disable=C0111,R0903,C0103,W0611,W0614
 
