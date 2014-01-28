@@ -6,6 +6,7 @@ alias gst='git status'
 alias gp='git pull -r'
 alias gb='git branch'
 alias gd='git diff'
+alias gpo='git push origin'
 
 alias mvi='mvn clean install -DskipTests' 
 alias pylint='pylint --rcfile=~/.pylintrc'
