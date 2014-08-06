@@ -1,5 +1,7 @@
 source $HOME/.bash_aliases
 
+source nvm.sh
+
 export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
 
 export _JAVA_OPTIONS="-ea -Xmx2048m -Xms1024M -Xss64m -XX:MaxPermSize=1024M -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
