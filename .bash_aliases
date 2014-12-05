@@ -8,5 +8,7 @@ alias gb='git branch'
 alias gd='git diff'
 alias gpo='git push origin'
 
+alias reset-last='git reset --soft HEAD~1'
+
 alias mvi='mvn clean install -DskipTests' 
 alias pylint='pylint --rcfile=~/.pylintrc'
