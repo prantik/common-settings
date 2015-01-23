@@ -1,5 +1,8 @@
 source $HOME/.bash_aliases
-
+export PATH="/usr/local/bin:$PATH"
+export PATH=/usr/local/:$PATH:/usr/local/bin/play-2.1.3
+export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
+export HISTSIZE=""
 source nvm.sh
 
 export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
