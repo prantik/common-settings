@@ -12,3 +12,6 @@ alias reset-last='git reset --soft HEAD~1'
 
 alias mvi='mvn clean install -DskipTests' 
 alias pylint='pylint --rcfile=~/.pylintrc'
+
+alias java7='export JAVA_HOME=$JAVA_7_HOME'
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
