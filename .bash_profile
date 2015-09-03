@@ -7,6 +7,10 @@ source nvm.sh
 
 export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
 
+# jdk
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+
 export _JAVA_OPTIONS="-ea -Xmx2048m -Xms1024M -Xss64m -XX:MaxPermSize=1024M -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 
 alias mysqlstart='sudo /opt/local/lib/mysql5/bin/mysqld_safe &'
