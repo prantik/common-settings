@@ -10,6 +10,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
 # jdk
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
+alias use_java_8="export JAVA_HOME=$(/usr/libexec/java_home -v '1.8*')"
+alias use_java_7="export JAVA_HOME=$(/usr/libexec/java_home -v '1.7*')"
 
 export _JAVA_OPTIONS="-ea -Xmx2048m -Xms1024M -Xss64m -XX:MaxPermSize=1024M -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 
