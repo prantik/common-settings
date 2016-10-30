@@ -1,26 +1,26 @@
 source $HOME/.bash_aliases
+
+export M2_HOME=/opt/apache-maven-3.3.9
+export M2=$M2_HOME/bin
+PATH=$M2:$PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH=/usr/local/:$PATH:/usr/local/bin/play-2.1.3
 export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
+export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+
 export HISTSIZE=""
-source nvm.sh
 
-export PATH=/opt/local/bin:/opt/local/sbin:/Applications::$PATH
-
-# jdk
+# jdk 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
-alias use_java_8="export JAVA_HOME=$(/usr/libexec/java_home -v '1.8*')"
-alias use_java_7="export JAVA_HOME=$(/usr/libexec/java_home -v '1.7*')"
+export JAVA_HOME=$JAVA_7_HOME
 
-export _JAVA_OPTIONS="-ea -Xmx2048m -Xms1024M -Xss64m -XX:MaxPermSize=1024M -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
-
-alias mysqlstart='sudo /opt/local/lib/mysql5/bin/mysqld_safe &'
-alias mysqlstop='sudo /opt/local/share/mysql5/mysql/mysql.server stop'
+export _JAVA_OPTIONS="-ea -Xmx6G -XX:MaxPermSize=4096M -Xms1G -Xss64m -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
+
+export PS1="\u@\h \W \[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 git config --global help.autocorrect 1
 
@@ -30,7 +30,10 @@ fi
 
 source ~/.git-completion.bash
 
-export PS1="\u@\h \W \[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+list-files() {
+    # for a git commit hash, list all changed files
+    git show --name-only $1
+}
 
 buildlatex() {
 	pdflatex "$1.tex";
@@ -38,5 +41,3 @@ buildlatex() {
 	pdflatex "$1.tex";
 	pdflatex "$1.tex";
 }
-
-ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
