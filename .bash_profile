@@ -22,7 +22,7 @@ export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_7_HOME=$(/usr/libexec/java_home -v1.7)
 export JAVA_HOME=$JAVA_7_HOME
 
-export _JAVA_OPTIONS="-ea -Xmx6G -XX:MaxPermSize=4096M -Xms1G -Xss64m -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
+export _JAVA_OPTIONS="-ea -Xmx6G -Xms1G -Xss64m -XX:+UseCodeCacheFlushing -XX:ReservedCodeCacheSize=256M -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC"
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
